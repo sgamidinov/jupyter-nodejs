@@ -1,5 +1,5 @@
 
-import zmq from 'zmq'
+import zmq from 'zeromq'
 
 const r = zmq.socket('dealer')
 const p = zmq.socket('router')
@@ -19,6 +19,6 @@ p.bind('tcp://*:55432', err => {
   setTimeout(() => {
     process.exit()
   }, 200)
-  
+
 })
 
